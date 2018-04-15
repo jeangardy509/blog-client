@@ -1,4 +1,4 @@
-// const store = require('../store')
+const store = require('../store')
 
 const signUpSuccess = function () {
   // $('#email-field').val('')
@@ -19,14 +19,15 @@ const signUpFailure = function () {
   $('#sign-up').css('color', 'white')
 }
 
-const signInSuccess = function () {
+const signInSuccess = function (data) {
   // $('#email-field').val('')
   // $('#password-field').val('')
   // $('#password-confirmation').val('')
   // $('#sign-up').hide(
-  $('#sign-in').text('you are now log in')
+  $('#sign-in').text('you are now log in' + data.user.id)
   $('#sign-in').css('background-color', 'green')
   $('#sign-in').css('color', 'white')
+  store.user = data.user
 }
 
 const signInFailure = function () {
@@ -38,9 +39,23 @@ const signInFailure = function () {
   $('#sign-in').css('color', 'white')
 }
 
+const changePasswordSuccess = function () {
+  $('#change-password').text('Password successfully change!')
+  $('#change-password').css('background-color', 'red')
+  $('#change-password').css('color', 'white')
+}
+
+const changePasswordFailure = function () {
+  $('#change-password').text('Was not able to change password, plase try again!')
+  $('#change-password').css('background-color', 'red')
+  $('#change-password').css('color', 'white')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  changePasswordSuccess,
+  changePasswordFailure
 }
