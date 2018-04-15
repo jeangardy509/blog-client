@@ -39,6 +39,17 @@ const signInFailure = function () {
   $('#sign-in').css('color', 'white')
 }
 
+const signOutSuccess = function () {
+  $('#sign-out').text('You have Successfully sign out')
+  $('#sign-out').css('background-color', 'green')
+  $('#sign-out').css('color', 'white')
+}
+const signOutFailure = function () {
+  $('#sign-out').text('Something went wrong, please try again!')
+  $('#sign-out').css('background-color', 'red')
+  $('#sign-out').css('color', 'white')
+}
+
 const changePasswordSuccess = function () {
   $('#change-password').text('Password successfully change!')
   $('#change-password').css('background-color', 'red')
@@ -56,6 +67,8 @@ module.exports = {
   signUpFailure,
   signInSuccess,
   signInFailure,
+  signOutSuccess,
+  signOutFailure,
   changePasswordSuccess,
   changePasswordFailure
 }
