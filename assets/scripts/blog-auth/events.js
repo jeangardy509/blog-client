@@ -48,6 +48,14 @@ const addHandlers = () => {
   $('a.show-pass').on('click', function () {
     $('#change-password').toggle()
   })
+  // $('#createblog').on('click', function () {
+  //   $('#change-password').toggle()
+  // })
+  $('#createblog').on('click', () => {
+    $('#searchbar').hide()
+    $('#blog-form').show()
+    // $('').toggle()
+  })
 }
 
 module.exports = {
