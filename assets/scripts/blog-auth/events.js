@@ -39,6 +39,15 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
+  $('a.show-form').on('click', function () {
+    $('#sign-up').toggle()
+  })
+  $('a.show-in').on('click', function () {
+    $('#sign-in').toggle()
+  })
+  $('a.show-pass').on('click', function () {
+    $('#change-password').toggle()
+  })
 }
 
 module.exports = {
