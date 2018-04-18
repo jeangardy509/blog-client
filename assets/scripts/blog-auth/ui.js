@@ -30,6 +30,11 @@ const signInSuccess = function (data) {
   $('#sign-in').text('you are now log in' + data.user.id)
   $('#sign-in').css('background-color', 'green')
   $('#sign-in').css('color', 'white')
+  $('#signup').hide()
+  $('#signin').hide()
+  $('#change').show()
+  $('#signout').show()
+  $('#createblog').show()
   // const handlebars = blogListHandlebars({blog: data.blogs})
   // $('.content').html(handlebars)
   store.user = data.user
@@ -48,6 +53,11 @@ const signOutSuccess = function () {
   $('#sign-out').text('You have Successfully sign out')
   $('#sign-out').css('background-color', 'green')
   $('#sign-out').css('color', 'white')
+  $('.#signup').show()
+  $('#signin').show()
+  $('#change').hide()
+  $('#signout').hide()
+  $('#createblog').hide()
 }
 const signOutFailure = function () {
   $('#sign-out').text('Something went wrong, please try again!')
