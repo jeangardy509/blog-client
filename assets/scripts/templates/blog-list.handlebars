@@ -1,0 +1,16 @@
+{{#each blogs as |blog|}}
+
+  <ul data-id="{{blog.id}}">
+  <div>
+    {{#if blog.id}}
+    <li>ID: {{blog.id}}</li>
+    <li>Title: {{blog.title}}</li>
+    <li>Content: {{blog.content}}</li>
+      <li><button><a class="delete" data-toggle="modal" data-target="#deletemodal" data-id="{{blog.id}}">Delete</a></button></li>
+        <li><button><a class="update" data-toggle="modal" data-target="#updateFormModal" data-id="{{blog.id}}">update</a></button></li>
+    {{else}}
+      No author provided.
+    {{/if}}
+  </div>
+</ul>
+{{/each}}

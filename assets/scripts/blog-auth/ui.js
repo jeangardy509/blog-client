@@ -1,5 +1,6 @@
 'use strict'
 
+// const showBlogsTemplate = require('./../templates/blog-list.handlebars')
 const store = require('../store')
 
 const signUpSuccess = function () {
@@ -29,6 +30,8 @@ const signInSuccess = function (data) {
   $('#sign-in').text('you are now log in' + data.user.id)
   $('#sign-in').css('background-color', 'green')
   $('#sign-in').css('color', 'white')
+  // const handlebars = blogListHandlebars({blog: data.blogs})
+  // $('.content').html(handlebars)
   store.user = data.user
 }
 
