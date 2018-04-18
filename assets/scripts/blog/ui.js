@@ -31,7 +31,6 @@ const updateBlogsSuccess = function () {
   // $('#updateOptionTwo').val('')
   // $('#updateOptionThree').val('')
   // $('#handlebars-here').html('Click show my surveys to see changes')
-
 }
 
 const updateBlogsFailure = function (error) {
@@ -44,11 +43,26 @@ const updateBlogsFailure = function (error) {
   // $('#updateOptionThree').val('')
 }
 
+const deleteBlogsSuccess = function (data) {
+  $('#blog-form').text('Your budget has been successfully created!')
+  $('#blog-form').css('background-color', 'red')
+  $('#blog-form').css('color', 'white')
+}
+
+const deleteBlogsFailure = function (error) {
+  $('#blog-form').text('Wasn\'t able to create a budget, please try again!')
+  $('#blog-form').css('background-color', 'red')
+  $('#blog-form').css('color', 'white')
+  console.log(error)
+}
+
 module.exports = {
   createBlogsSuccess,
   createBlogsFailure,
   updateBlogsSuccess,
   updateBlogsFailure,
-  getBlogsSuccess
+  getBlogsSuccess,
+  deleteBlogsSuccess,
+  deleteBlogsFailure
 
 }

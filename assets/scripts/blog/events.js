@@ -25,10 +25,19 @@ const onUpdateBlogs = function (event) {
     .then(ui.updateBlogsSuccess)
     .catch(ui.updateBlogsFailure)
 }
+
+const onDeleteBlogs = function (event) {
+  event.preventDefault()
+  const id = event.target.dataset.id
+  api.deleteBlogs(id)
+    .then(ui.deleteBlogsSuccess)
+    .catch(ui.deleteBlogsFailure)
+}
 const addHandlers = () => {
   $('#getBlogsButton').on('click', onGetBlogs)
   $('#create').on('submit', onCreateBlogs)
   $('#update-blog').on('submit', onUpdateBlogs)
+  $('#content').on('click', '.delete-blog-button', onDeleteBlogs)
   // $('#content').on('click', '.update', onUpdateBlogs)
   // $('#content').on('click', onUpdateBlogs => {
   //   $('#blog-form').show()
