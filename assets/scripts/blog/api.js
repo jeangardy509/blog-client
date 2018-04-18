@@ -20,9 +20,10 @@ const createBlogs = function (data) {
   })
 }
 const updateBlogs = function (data) {
+  console.log('data is ', data)
   return $.ajax({
-    url: config.apiUrl + '/blogs',
-    method: 'POST',
+    url: config.apiUrl + '/blogs/' + data.blog.id,
+    method: 'PATCH',
     headers: {
       contentType: 'application/json',
       Authorization: 'Token token=' + store.user.token
@@ -30,6 +31,7 @@ const updateBlogs = function (data) {
     data
   })
 }
+
 module.exports = {
   getBlogs,
   createBlogs,

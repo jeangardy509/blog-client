@@ -54,7 +54,6 @@ const addHandlers = () => {
   $('#createblog').on('click', () => {
     $('#searchbar').hide()
     $('#blog-form').show()
-    // $('').toggle()
   })
 }
 

@@ -18,16 +18,21 @@ const onCreateBlogs = (event) => {
     .catch(ui.createBlogsFailure)
 }
 const onUpdateBlogs = function (event) {
+  console.log('TEST')
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.updateSurvey(data)
-    .then(ui.updateSuccess)
-    .catch(ui.updateFailed)
+  api.updateBlogs(data)
+    .then(ui.updateBlogsSuccess)
+    .catch(ui.updateBlogsFailure)
 }
 const addHandlers = () => {
   $('#getBlogsButton').on('click', onGetBlogs)
   $('#create').on('submit', onCreateBlogs)
-  $('#update').on('submit', onUpdateBlogs)
+  $('#update-blog').on('submit', onUpdateBlogs)
+  // $('#content').on('click', '.update', onUpdateBlogs)
+  // $('#content').on('click', onUpdateBlogs => {
+  //   $('#blog-form').show()
+  // })
 }
 
 module.exports = {

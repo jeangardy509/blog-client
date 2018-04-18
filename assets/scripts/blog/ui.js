@@ -23,6 +23,7 @@ const createBlogsFailure = function (error) {
 }
 
 const updateBlogsSuccess = function () {
+  $('#update-blog-modal').modal('hide')
   // $('#message').text('Survey Updated')
   // $('#message').css('background-color', 'green')
   // $('#updateId').val('')
@@ -33,13 +34,14 @@ const updateBlogsSuccess = function () {
 
 }
 
-const updateBlogsFailure = function (data) {
+const updateBlogsFailure = function (error) {
+  console.log(error)
   // $('#message').text('Problem Updating, Please try again')
   // $('#message').css('background-color', 'red')
-  $('#updateId').val('')
-
-  $('#updateOptionTwo').val('')
-  $('#updateOptionThree').val('')
+  // $('#updateId').val('')
+  //
+  // $('#updateOptionTwo').val('')
+  // $('#updateOptionThree').val('')
 }
 
 module.exports = {
