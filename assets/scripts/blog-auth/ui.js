@@ -71,6 +71,7 @@ const signOutSuccess = function () {
   $('#signout').hide()
   $('#createblog').hide()
   $('#getBlogsButton').hide()
+  $('#content').hide()
 }
 const signOutFailure = function () {
   // $('#signout').text('Something went wrong, please try again!')

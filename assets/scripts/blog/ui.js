@@ -6,7 +6,7 @@ const showBlogsTemplate = require('../templates/blog-list.handlebars')
 const getBlogsSuccess = (data) => {
   console.log(data)
   const showBlogsHtml = showBlogsTemplate({ blogs: data.blogs })
-  $('.content').append(showBlogsHtml)
+  $('.content').html(showBlogsHtml)
 }
 
 const createBlogsSuccess = function (data) {
