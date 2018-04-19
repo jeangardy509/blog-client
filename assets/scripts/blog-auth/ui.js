@@ -46,6 +46,7 @@ const signInSuccess = function (data) {
   $('#signout').show()
   $('#createblog').show()
   $('#getBlogsButton').show()
+  $('#sign-up').hide()
   // $('#sign-in').hide(9000)
   // const handlebars = blogListHandlebars({blog: data.blogs})
   // $('.content').html(handlebars)
@@ -72,6 +73,7 @@ const signOutSuccess = function () {
   $('#createblog').hide()
   $('#getBlogsButton').hide()
   $('#content').hide()
+  $('#create').hide()
 }
 const signOutFailure = function () {
   // $('#signout').text('Something went wrong, please try again!')
