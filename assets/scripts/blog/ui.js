@@ -13,6 +13,8 @@ const createBlogsSuccess = function (data) {
   // $('#blog-form').text('Your budget has been successfully created!')
   // $('#blog-form').css('background-color', 'red')
   // $('#blog-form').css('color', 'white')
+  $('#titleField').val('')
+  $('#contentField').val('')
 }
 
 const createBlogsFailure = function () {
@@ -43,16 +45,15 @@ const updateBlogsFailure = function (error) {
 }
 
 const deleteBlogsSuccess = function (data) {
-  $('#blog-form').text('Your budget has been successfully created!')
-  $('#blog-form').css('background-color', 'red')
-  $('#blog-form').css('color', 'white')
+  // $('#blog-form').text('Your budget has been successfully created!')
+  // $('#blog-form').css('background-color', 'red')
+  // $('#blog-form').css('color', 'white')
 }
 
-const deleteBlogsFailure = function (error) {
-  $('#blog-form').text('Wasn\'t able to create a budget, please try again!')
-  $('#blog-form').css('background-color', 'red')
-  $('#blog-form').css('color', 'white')
-  console.log(error)
+const deleteBlogsFailure = function () {
+  // $('#blog-form').text('Wasn\'t able to create a budget, please try again!')
+  // $('#blog-form').css('background-color', 'red')
+  // $('#blog-form').css('color', 'white')
 }
 
 module.exports = {
