@@ -37,7 +37,9 @@ const onChangePassword = function (event) {
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
-  $('#sign-out').on('submit', onSignOut)
+  // $('#sign-out').on('click', onSignOut)
+  // $('#sign').on('submit', onSignOut)
+  $('#signout').on('click', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('a.show-form').on('click', function () {
     $('#sign-up').toggle()

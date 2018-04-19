@@ -33,11 +33,13 @@ const onDeleteBlogs = function (event) {
     .then(ui.deleteBlogsSuccess)
     .catch(ui.deleteBlogsFailure)
 }
+
 const addHandlers = () => {
   $('#getBlogsButton').on('click', onGetBlogs)
   $('#create').on('submit', onCreateBlogs)
   $('#update-blog').on('submit', onUpdateBlogs)
   $('#content').on('click', '.delete-blog-button', onDeleteBlogs)
+  // $('#searchbar').on('click', onGetBlogs)
   // $('#content').on('click', '.update', onUpdateBlogs)
   // $('#content').on('click', onUpdateBlogs => {
   //   $('#blog-form').show()

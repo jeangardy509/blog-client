@@ -20,7 +20,6 @@ const createBlogs = function (data) {
   })
 }
 const updateBlogs = function (data) {
-  console.log('data is ', data)
   return $.ajax({
     url: config.apiUrl + '/blogs/' + data.blog.id,
     method: 'PATCH',
@@ -33,7 +32,6 @@ const updateBlogs = function (data) {
 }
 
 const deleteBlogs = function (id) {
-  console.log(id)
   return $.ajax({
     url: config.apiUrl + '/blogs/' + id,
     method: 'DELETE',

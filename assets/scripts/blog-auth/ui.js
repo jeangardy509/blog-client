@@ -7,10 +7,11 @@ const signUpSuccess = function () {
   // $('#email-field').val('')
   // $('#password-field').val('')
   // $('#password-confirmation').val('')
-  $('#sign-up').hide()
   $('#sign-up').text('Account Successfully created')
-  $('#sign-up').css('background-color', 'green')
+  // $('#sign-up').hide()
+  $('#sign-up').css('background-color', 'purple')
   $('#sign-up').css('color', 'white')
+  $('#sign-up').hide(9000)
 }
 
 const signUpFailure = function () {
@@ -27,14 +28,17 @@ const signInSuccess = function (data) {
   // $('#password-field').val('')
   // $('#password-confirmation').val('')
   // $('#sign-up').hide(
-  $('#sign-in').text('you are now log in' + data.user.id)
-  $('#sign-in').css('background-color', 'green')
+  $('#sign-in').text('you are now log in, your user ID number is' + data.user.id)
+  $('#sign-in').css('font-size', 20)
+  $('#sign-in').css('background-color', 'purple')
   $('#sign-in').css('color', 'white')
   $('#signup').hide()
   $('#signin').hide()
   $('#change').show()
   $('#signout').show()
   $('#createblog').show()
+  $('#getBlogsButton').show()
+  $('#sign-in').hide(9000)
   // const handlebars = blogListHandlebars({blog: data.blogs})
   // $('.content').html(handlebars)
   store.user = data.user
@@ -50,19 +54,20 @@ const signInFailure = function () {
 }
 
 const signOutSuccess = function () {
-  $('#sign-out').text('You have Successfully sign out')
-  $('#sign-out').css('background-color', 'green')
-  $('#sign-out').css('color', 'white')
-  $('.#signup').show()
+  $('#signout').text('You have Successfully sign out')
+  $('#signout').css('background-color', 'green')
+  $('#signout').css('color', 'white')
+  $('#signup').show()
   $('#signin').show()
   $('#change').hide()
   $('#signout').hide()
   $('#createblog').hide()
+  $('#getBlogsButton').hide()
 }
 const signOutFailure = function () {
-  $('#sign-out').text('Something went wrong, please try again!')
-  $('#sign-out').css('background-color', 'red')
-  $('#sign-out').css('color', 'white')
+  // $('#signout').text('Something went wrong, please try again!')
+  $('#signout').css('background-color', 'red')
+  $('#signout').css('color', 'white')
 }
 
 const changePasswordSuccess = function () {
