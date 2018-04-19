@@ -37,6 +37,8 @@ const signInSuccess = function (data) {
   // $('#sign-in').css('font-size', 20)
   // $('#sign-in').css('background-color', 'purple')
   // $('#sign-in').css('color', 'white')
+  $('#message').text('Hello')
+  $('#message').css('background-color', 'green')
   $('#signup').hide()
   $('#signin').hide()
   $('#sign-in').hide()
