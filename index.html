@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BLOG SPACE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <nav class="navbar  navbar-inverse  navbar-fixed-top">
+    <div class="container">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="sr-only"> Toggle navigation</span>
+    <span class="icon-bar"> </span>
+    <span class="icon-bar"> </span>
+    <span class="icon-bar"> </span>
+    </button>
+
+      <!-- <a class="navbar-brand" href="#"> Bootsnipp</a> -->
+
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Account
+  					<b class="caret"> </b></a>
+            <ul class="dropdown-menu">
+              <li id="signup"><a class="show-form" href="#sign-up">Sign Up</a></li>
+              <li id="signin"><a class="show-in" href="#sign-in">Sign In</a></li>
+              <li id="change"><a class="show-pass" href="#change-password">Change Password</a></li>
+              <li id="signout"><a class="show-out" href="#sign-out">Sign out</a> </li>
+              <li><button id="createblog" type="button" class="btn btn-primary btn-cons">CREATE A BLOG</button></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <p id="message"></p>
+  <!-- SIGN UP FORM BEGINNING -->
+  <p id="message"></p>
+  <div class="col-md-4 col-md-offset-4" style="margin-top:50px;">
+    <form id="sign-up" class="form-horizontal" class="col-md-6 col-md-offset-3">
+      <!-- <div id="signupalert" style="display:none" class="alert alert-danger">
+        <p>Error:</p>
+        <span></span>
+      </div> -->
+      <div style="margin-bottom: 25px" class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input type="text" class="form-control" required id="firstNameField" name="credentials[first_name]" placeholder="First Name">
+        <input type="text" class="form-control" required id="lastNameField" name="credentials[last_name]" placeholder="Last Name">
+        <input type="text" class="form-control" required id="userNameField" name="credentials[username]" placeholder="Username">
+      </div>
+
+      <div style="margin-bottom: 25px" class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+        <input type="email" required id="emailField" class="form-control" name="credentials[email]" placeholder="Email">
+      </div>
+
+      <div style="margin-bottom: 25px" class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input type="password" class="form-control" required id="passwordField" name="credentials[password]" placeholder="Password">
+        <input type="password" class="form-control" required id="passwordConfField" name="credentials[password_confirmation]" placeholder="Confirm Password">
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-offset-3 col-lg-3">
+          <input type="submit" value="Sign up" class="btn btn-danger pull-right">
+          <!-- <button id="btn-signup" type="button" class="btn btn-danger"><i class="icon-hand-right"></i>Sign Up</button> -->
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- END OF SIGN UP FORM -->
+
+  <!-- SIGN IN FORM BEGINNING -->
+  <div class="col-md-4 col-md-offset-4" style="margin-top:50px;">
+    <form id="sign-in" class="form-horizontal" class="col-md-6 col-md-offset-3">
+      <div style="margin-bottom: 25px" class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input type="text" class="form-control" required id="usernameField" name="credentials[username]" placeholder="Username">
+      </div>
+
+      <div style="margin-bottom: 25px" class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+        <input type="email" required id="EmailField" class="form-control" name="credentials[email]" placeholder="Email">
+      </div>
+
+      <div style="margin-bottom: 25px" class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input type="password" class="form-control" required id="PasswordField" name="credentials[password]" placeholder="Password">
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-offset-3 col-lg-3">
+          <input type="submit" value="Sign In" class="btn btn-primary pull-right">
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- END OF SIGN IN FORM -->
+
+  <!-- CHANGE PASSWORD FORM BEGINNING -->
+  <div class="col-md-4 col-md-offset-4" style="margin-top:50px;">
+    <form id="change-password" class="form-horizontal" class="col-md-6 col-md-offset-3">
+
+      <div style="margin-bottom: 25px" class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input type="password" class="form-control" required id="passwordFiels" name="passwords[old]" placeholder="Old Password">
+        <input type="password" class="form-control" required id="passwordFields" name="passwords[new]" placeholder="New Password">
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-offset-3 col-lg-3">
+          <input type="submit" value="Save" class="btn btn-danger pull-right">
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- END OF CHANGE PASSWORD FORM -->
+
+  <!-- SIGN OUT FORM BEGINNING -->
+  <!-- <div class="col-md-4 col-md-offset-4" style="margin-top:50px;">
+    <form id="sign-out" class="form-horizontal" class="col-md-6 col-md-offset-3">
+      <div class="form-group">
+        <div class="col-lg-offset-3 col-lg-3">
+          <input type="submit" value="Sign Out" class="btn btn-primary pull-right">
+        </div>
+      </div>
+    </form>
+  </div> -->
+  <!-- END OF SIGN OUT FORM -->
+
+  <!-- SEARCH BAR BEGINNING -->
+  <div id="searchbar" class="container">
+    <div class="row">
+      <div id="custom-search-input">
+        <div class="input-group col-md-12">
+          <input type="text" class="  search-query form-control" placeholder="Search" />
+          <span class="input-group-btn">
+          <button class="btn btn-danger" type="button">
+          <span class=" glyphicon glyphicon-search"></span>
+          </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END OF BAR SECTION -->
+
+  <!-- BEGINNING OF MESSAGE FORM -->
+  <div id="blog-form" class="container">
+    <div class="col-md-5">
+      <div class="form-area">
+        <form id="create" role="form">
+          <br style="clear:both">
+          <div class="form-group">
+            <input type="text" class="form-control" id="titleField" name="blog[title]" placeholder="Title" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" type="textarea" id="contentField" name="blog[content]" placeholder="Message" rows="7"></textarea>
+          </div>
+          <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Submit Blog</button>
+          <!-- <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Cancel</button> -->
+          <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- END OF MESSAGE FORM -->
+
+  <!-- UPDATE FORM BEGINNING -->
+
+    <div class="modal fade" id="update-blog-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <!-- <div class="modal-header">
+          <h5 class="modal-title" id="update-blog-modal-title">ENTER YOUR BLOG!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+          <div class="modal-body">
+            <form id="update-blog" class="border">
+              <fieldset>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default-10">ID</span>
+                  </div>
+                  <input id="update-blog-id" type="text" class="form-control" name="blog[id]" placeholder="Enter blog ID" required>
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default-20">Title</span>
+                  </div>
+                  <input id="update-blog-title" type="text" class="form-control" name="blog[title]" placeholder="Title" required>
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <!-- <span class="input-group-text" id="inputGroup-sizing-default-20">Content</span> -->
+                    <textarea id="update-blog-content" class="form-control" type="textarea" name="blog[content]" placeholder="Message" rows="7"></textarea>
+                    <input class="btn btn-primary" type="submit" value="Update Blog!">
+              </fieldset>
+              </div>
+              <!-- <input id="update-blog-title" type="text" class="form-control" name="blog[title]" placeholder="Title" required> -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- END OF UPDATE FORM -->
+
+  <!-- GET BLOGS AND CLEAR BUTTONS FORMS BEGINNING -->
+  <button id="getBlogsButton" class="btn btn-default">Get Blogs!</button>
+  <!-- <button id="clearBlogsButton" class="btn btn-default">Clear Blogs!</button> -->
+  <div id="content" class="content">
+  </div>
+  <!-- END OF BLOGS AND CLEAR BUTTONS FORMS -->
+
+
+  <!-- BEGINNING OF FOOTER -->
+  <div class="navbar  navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+      <div class="navbar-text pull=left">
+        <p> Copyright © 2018, Blog Space. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- END OF FOOTER -->
+</body>
+
+</html>
