@@ -13,11 +13,12 @@ body {
 
 #sign-up {
   display: none;
-  padding-top: 20%;
+  margin-top: 20%;
 }
 
 #sign-in {
   display: none;
+  margin-top: 20%;
 }
 
 #sign-out {
@@ -52,10 +53,22 @@ body {
 display: none;
 }
 
+<<<<<<< HEAD
 // #searchbar {
 // margin-top: 500px;
 // }
 
 #message {
 margin-top: 200px;
+=======
+#searchbar {
+  padding-top: 20%;
+}
+
+#message {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+>>>>>>> styling
 }
