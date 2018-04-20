@@ -21,9 +21,9 @@ body {
   margin-top: 20%;
 }
 
-#sign-out {
-  display: none;
-}
+// #sign-out {
+//   display: none;
+// }
 
 #change-password {
   display: none;
@@ -62,4 +62,9 @@ display: none;
   margin-bottom: 100px;
   margin-right: 150px;
   margin-left: 80px;
+}
+
+#getBlogsButton {
+  position: fixed;
+  bottom: 35em;
 }

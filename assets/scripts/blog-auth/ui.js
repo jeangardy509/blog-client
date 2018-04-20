@@ -56,35 +56,42 @@ const signInSuccess = function (data) {
   $('#signout').show()
   $('#createblog').show()
   $('#getBlogsButton').show()
-  $('#userNameField').val('')
-  $('#emailField').val('')
-  $('#passwordField').val('')
+  $('#usernameField').val('')
+  $('#EmailField').val('')
+  $('#PasswordField').val('')
   store.user = data.user
 }
 
 const signInFailure = function () {
-  // $('#email-field').val('')
-  // $('#password-field').val('')
-  // $('#password-confirmation').val('')
-  $('#message').text('cant log in!')
-  $('#sig-in').css('background-color', 'red')
-  $('#sign-in').css('color', 'white')
+  $('#message').text('Please check your credentials, and try again')
+  $('#message').css('font-size', 20)
+  $('#message').css('background-color', 'red')
+  $('#message').css('color', 'white')
+  $('#message').hide(9000)
+  $('#sign-in').hide()
+  $('#change').hide()
+  $('#signout').hide()
+  $('#usernameField').val('')
+  $('#EmailField').val('')
+  $('#PasswordField').val('')
 }
 
 const signOutSuccess = function () {
-  // $('#message').text('You have Successfully sign out')
-  // $('#signout').css('background-color', 'green')
+  // $('#signout').text('We hope to see you again soon')
+  // $('#signout').css('font-size', 20)
+  // $('#signout').css('background-color', 'blue')
   // $('#signout').css('color', 'white')
-  $('#signup').show()
-  $('#signin').show()
-  $('#change').hide()
-  $('#signout').hide()
-  $('#createblog').hide()
-  $('#getBlogsButton').hide()
-  $('#content').hide()
-  $('#create').hide()
-  $('#change-password').hide()
+  // $('#signout').hide(9000)
+  // $('#signup').show()
+  // $('#signin').show()
+  // $('#change').hide()
+  // $('#signout').hide()
+  // $('#createblog').hide()
+  // $('#getBlogsButton').hide()
+  // $('#content').hide()
+  // $('#create').hide()
 }
+
 const signOutFailure = function () {
   // $('#signout').text('Something went wrong, please try again!')
   // $('#message').css('background-color', 'red')
@@ -92,9 +99,14 @@ const signOutFailure = function () {
 }
 
 const changePasswordSuccess = function () {
-  // $('#message').text('Password successfully change!')
-  // $('#change-password').css('background-color', 'red')
-  // $('#change-password').css('color', 'white')
+  $('#message').text('Please check your credentials, and try again')
+  $('#message').css('font-size', 20)
+  $('#message').css('background-color', 'red')
+  $('#message').css('color', 'white')
+  $('#message').hide(9000)
+  $('#passwordFields').val('')
+  $('#passwordFields').val('')
+  $('#change-password').hide()
 }
 
 const changePasswordFailure = function () {
