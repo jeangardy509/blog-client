@@ -37,8 +37,10 @@ const signInSuccess = function (data) {
   // $('#sign-in').css('font-size', 20)
   // $('#sign-in').css('background-color', 'purple')
   // $('#sign-in').css('color', 'white')
-  $('#message').text('Hello')
-  $('#message').css('background-color', 'green')
+  $('#message').text('you are now log in, your user ID number is ' + data.user.id)
+  $('#message').css('font-size', 20)
+  $('#message').css('background-color', 'purple')
+  $('#message').hide(9000)
   $('#signup').hide()
   $('#signin').hide()
   $('#sign-in').hide()
@@ -47,9 +49,9 @@ const signInSuccess = function (data) {
   $('#createblog').show()
   $('#getBlogsButton').show()
   $('#sign-up').hide()
-  // $('#sign-in').hide(9000)
-  // const handlebars = blogListHandlebars({blog: data.blogs})
-  // $('.content').html(handlebars)
+  $('#usernameField').val('')
+  $('#emailField').val('')
+  $('#passwordField').val('')
   store.user = data.user
 }
 

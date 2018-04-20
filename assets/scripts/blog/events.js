@@ -9,6 +9,7 @@ const onGetBlogs = (event) => {
   api.getBlogs()
     .then(ui.getBlogsSuccess)
     .catch(ui.failure)
+  $('#content').toggle()
 }
 const onCreateBlogs = (event) => {
   event.preventDefault()
@@ -18,7 +19,6 @@ const onCreateBlogs = (event) => {
     .catch(ui.createBlogsFailure)
 }
 const onUpdateBlogs = function (event) {
-  console.log('TEST')
   event.preventDefault()
   const data = getFormFields(event.target)
   api.updateBlogs(data)
