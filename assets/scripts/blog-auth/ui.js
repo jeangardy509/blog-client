@@ -3,14 +3,11 @@
 // const showBlogsTemplate = require('./../templates/blog-list.handlebars')
 const store = require('../store')
 
-const signUpSuccess = function () {
-  // $('#email-field').val('')
-  // $('#password-field').val('')
-  // $('#password-confirmation').val('')
-  $('#sign-up').text('Account Successfully created')
-  // $('#sign-up').hide()
-  $('#sign-up').css('background-color', 'purple')
+const signUpSuccess = function (data) {
+  $('#sign-up').text('WELCOME TO BLOG SPACE')
   $('#sign-up').css('color', 'white')
+  $('#sign-up').css('background-color', 'blue')
+  $('#sign-up').css('font-size', 20)
   $('#sign-up').hide(9000)
 }
 
@@ -24,23 +21,21 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (data) {
-  // $('#email-field').val('')
-  // $('#password-field').val('')
-  // $('#password-confirmation').val('')
-  // $('#sign-up').hide(
-  $('#sign-in').text('you are now log in, your user ID number is' + data.user.id)
-  $('#sign-in').css('font-size', 20)
-  $('#sign-in').css('background-color', 'purple')
-  $('#sign-in').css('color', 'white')
+  $('#message').text('you are now log in, your user ID number is' + data.user.id)
+  $('#message').css('font-size', 20)
+  $('#message').css('background-color', 'purple')
+  $('#message').css('color', 'white')
+  $('#message').hide(9000)
   $('#signup').hide()
   $('#signin').hide()
+  $('#sign-in').hide()
   $('#change').show()
   $('#signout').show()
   $('#createblog').show()
   $('#getBlogsButton').show()
-  $('#sign-in').hide(9000)
-  // const handlebars = blogListHandlebars({blog: data.blogs})
-  // $('.content').html(handlebars)
+  $('#userNameField').val('')
+  $('#emailField').val('')
+  $('#passwordField').val('')
   store.user = data.user
 }
 
