@@ -42,6 +42,7 @@ const deleteBlogs = function (id) {
   })
 }
 
+
 module.exports = {
   getBlogs,
   createBlogs,
